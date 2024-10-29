@@ -1,6 +1,5 @@
-from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect
-
+from django.contrib.auth import authenticate, login as auth_login
 from .models import User
 
 
@@ -21,7 +20,7 @@ def login(request):
 
 
 def signup(request):
-    if request.method == 'POST':      
+    if request.method == 'POST':
         name = request.POST.get('name', '')
         email = request.POST.get('email', '')
         password1 = request.POST.get('password1', '')
